@@ -4,6 +4,7 @@ import mundopc.modelo.Computadora;
 import mundopc.modelo.Monitor;
 import mundopc.modelo.Raton;
 import mundopc.modelo.Teclado;
+import mundopc.servicio.Orden;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +21,11 @@ public class Main {
 
         Computadora computadoraLenovo = new Computadora("Computadora Lenovo",monitorLenovo,tecladoLenovo,ratonLenovo);
         System.out.println(computadoraLenovo);
+
+        //creando orden
+        Orden orden_1 = new Orden();
+        orden_1.agregarComputadora(computadoraLenovo);
+        orden_1.mostarOrden();
 
     }
 }
